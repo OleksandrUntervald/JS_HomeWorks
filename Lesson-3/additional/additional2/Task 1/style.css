@@ -1,0 +1,20 @@
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.users-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.user-block{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+
+
+}
