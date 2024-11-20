@@ -3,6 +3,7 @@
 // --написати пошук всіх об'єктів, в яких в modules є sass
 // --написати пошук всіх об'єктів, в яких в modules є docker
 
+
 let coursesArray = [
     {
         title: 'JavaScript Complex',
@@ -73,10 +74,25 @@ let coursesArray = [
     }
 ];
 
-coursesArray.filter(course => {
-    course.modules.includes('sass')
-});
+console.log(coursesArray.find(course => {
+    return course.modules.includes('sass');
+}))
 
-coursesArray.filter(course => {
-    course.modules.includes('docker')
-})
+
+console.log(coursesArray.find(course => {
+    return course.modules.includes('docker');
+}))
+//
+// let g = [];
+//
+//
+// sassFinder = (arr) => {
+//     for (let i = 0; i < arr.length; i++){
+//         if (arr[i].modules.includes('sass')){
+//             g.push(arr[i]);
+//         }
+//     }
+//     return g
+// }
+//
+// console.log(sassFinder(coursesArray))

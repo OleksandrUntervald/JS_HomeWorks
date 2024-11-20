@@ -7,45 +7,50 @@
 //     clubs:[]
 // }
 
-const suits = ['spade', 'diamond', 'heart', 'club' ];
-const values = ['6', '7', '8', '9', '10', 'ace', 'jack', 'queen', 'king'];
 
+let arr1 = ['spade', 'diamond','heart', 'clubs'];
+let arr2 = ['6', '7', '8' , '9' , '10', 'ace','jack','queen','king'];
 const cards = [];
-for( const suit of suits){
-    for (const value of values){
-        const card = {cardSuit: suit, value:value};
-        if(suit === 'heart' || suit === 'diamond'){
+
+for (const suit of arr1){
+    for (const values of arr2){
+        const card = ({cardsSuit: suit, value: values})
+        if (suit === "heart" || suit === "diamond"){
             card.color = 'red';
-        } else {
+        }
+
+        if (suit === "spade" || suit === "clubs"){
             card.color = 'black';
         }
-        cards.push(card);
-
+        cards.push(card)
     }
+
 }
 
-const reduce = cards.reduce((accum, card) => {
-    switch (card.cardSuit){
-        case 'spade':
-            accum.spades.push(card);
-            break;
-        case 'diamond':
-            accum.diamonds.push(card);
-            break;
-        case 'club':
-            accum.clubs.push(card);
-            break;
-        case 'heart':
-            accum.hearts.push(card);
-            break;
-    }
-    return accum;
-},
-    {
+
+let obj = {
     spades:[],
     diamonds:[],
     hearts:[],
     clubs:[]
-    })
+}
 
-console.log(reduce)
+pockets = (cards) =>{
+    for (const card of cards){
+        if (card.cardsSuit === "spade"){
+            obj.spades.push(card);
+        }
+        if (card.cardsSuit === "heart"){
+            obj.spades.push(card);
+        }
+        if (card.cardsSuit === "diamond"){
+            obj.spades.push(card);
+        }
+        if (card.cardsSuit === "club"){
+            obj.spades.push(card);
+        }
+    }
+    return cards
+}
+
+console.log(pockets(cards))

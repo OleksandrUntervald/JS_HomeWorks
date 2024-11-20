@@ -3,15 +3,14 @@
 //     let str = 'Ревуть воли як ясла повні';
 // let arr = stringToarray(str); ['Ревуть', 'воли', 'як', 'ясла', 'повні']
 
-
 let str = 'Ревуть воли як ясла повні';
 
-let stringToarray = (str) => {
-    if (str){
-        const splitter =   str.split(' ');
-        return splitter;
+rewrite = (str1) => {
+    if(str1){
+        let arr = [];
+        arr = str1.split(' ');
+        return arr;
     }
-
+    return "";
 }
-
-console.log(stringToarray(str))
+console.log(rewrite(str))

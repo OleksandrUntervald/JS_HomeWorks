@@ -3,4 +3,5 @@
 
 let str = ' dirty string   ';
 
-console.log(str.trim().length)
+ let s = str.trim();
+ console.log(s.length)

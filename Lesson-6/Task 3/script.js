@@ -6,7 +6,6 @@ let str1 = 'HELLO WORLD';
 let str2 = 'LOREM IPSUM';
 let str3 = 'JAVASCRIPT IS COOL';
 
-let arr = [str1, str2, str3];
-for(let g of arr){
-    console.log(g.toLowerCase())
-}
+let str4 = str1 + str2 + str3;
+str5 = str4.toLowerCase();
+console.log(str5)
